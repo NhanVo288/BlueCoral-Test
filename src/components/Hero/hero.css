@@ -1,0 +1,153 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--page-max-width);
+  padding: 0 86px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+.hero__card {
+  display: flex;
+  height: 650px;
+  padding: 80px 86px;
+  align-items: center;
+  gap: 60px;
+  border-radius: 24px;
+  background:
+    url("/hero.png")
+      no-repeat center right / cover;
+  overflow: hidden;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hero__badge {
+  display: flex;
+  padding: 8px 12px 8px 8px;
+  align-items: center;
+  border-radius: 80px;
+  border: 1px solid var(--white);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    2px 2px 2px 0 rgba(0, 0, 0, 0.04) inset,
+    0 2px 8px -2px rgba(0, 0, 0, 0.1);
+}
+
+.hero__badge-logo {
+  width: 81px;
+  aspect-ratio: 81 / 28;
+}
+
+.hero__title {
+  max-width: 824px;
+  color: var(--brand-dark);
+  font: 800 56px/68px var(--font-primary);
+}
+
+.hero__description {
+  max-width: 619px;
+  color: var(--brand-dark);
+  font: 400 16px/28px var(--font-primary);
+}
+
+.hero__cta {
+  height: 60px;
+  padding: 0 24px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.hero__pagination {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__dot {
+  width: 24px;
+  height: 2px;
+  padding: 0;
+  border: none;
+  border-radius: 2px;
+  background: #d9d9d9;
+  cursor: pointer;
+  transition:
+    width 0.2s,
+    background-color 0.2s;
+}
+
+.hero__dot--active {
+  width: 60px;
+  height: 4px;
+  background: var(--brand-dark);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 20px;
+  }
+
+  .hero__card {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 0;
+    gap: 0;
+    border-radius: 12px;
+    background: none;
+  }
+
+  .hero__card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 12px 12px 0 0;
+    background: url("/mobile.png") no-repeat top center / cover;
+  }
+
+  .hero__content {
+    gap: 16px;
+    padding: 16px 24px 24px;
+    background: var(--bg-cream);
+    border-radius: 0 0 12px 12px;
+  }
+
+  .hero__badge-logo {
+    width: 58px;
+  }
+
+  .hero__title {
+    max-width: 100%;
+    font: 800 32px/40px var(--font-primary);
+  }
+
+  .hero__description {
+    max-width: 100%;
+    font: 400 14px/20px var(--font-primary);
+  }
+
+  .hero__cta {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
