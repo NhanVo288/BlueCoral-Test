@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 import Logo from "../Logo/Logo";
 import DesktopMenu from "./DesktopMenu";
@@ -31,15 +31,15 @@ export default function Navbar() {
           <button
             type="button"
             className="navbar__hamburger"
-            onClick={() => setOpen(true)}
-            aria-label="Mở menu"
+            onClick={() => setOpen((prev) => !prev)}
+            aria-label={open ? "Đóng menu" : "Mở menu"}
           >
-            <Menu />
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </header>
 
-      <MobileMenu open={open} setOpen={setOpen} />
+      <MobileMenu open={open} />
     </>
   );
 }

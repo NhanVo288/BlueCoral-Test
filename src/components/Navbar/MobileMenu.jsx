@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { X, ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 
-import Logo from "../Logo/Logo";
 import menu from "../../data/menu";
 
-export default function MobileMenu({ open, setOpen }) {
+export default function MobileMenu({ open }) {
   const [expanded, setExpanded] = useState(null);
 
   if (!open) return null;
@@ -12,21 +11,6 @@ export default function MobileMenu({ open, setOpen }) {
   return (
     <div className="mobile-menu">
       <div className="mobile-menu__glow" />
-
-      <div className="mobile-menu__header">
-        <a href="/" className="navbar__logo" aria-label="Qtable">
-          <Logo />
-        </a>
-
-        <button
-          type="button"
-          className="mobile-menu__close"
-          onClick={() => setOpen(false)}
-          aria-label="Đóng menu"
-        >
-          <X size={16} />
-        </button>
-      </div>
 
       <nav className="mobile-menu__nav">
         {menu.map((item) => (

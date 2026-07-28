@@ -154,11 +154,14 @@
   flex-shrink: 0;
 }
 
-/* Mobile menu overlay */
+/* Mobile menu panel */
 .mobile-menu {
   position: fixed;
-  inset: 0;
-  z-index: 100;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
   display: flex;
   flex-direction: column;
   background: var(--bg-cream);
@@ -176,34 +179,6 @@
   opacity: 0.5;
   filter: blur(150px);
   pointer-events: none;
-}
-
-.mobile-menu__header {
-  display: flex;
-  height: 64px;
-  padding: 16px 20px;
-  justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.mobile-menu__header .navbar__logo {
-  width: 93px;
-  aspect-ratio: 93 / 32;
-}
-
-.mobile-menu__close {
-  display: flex;
-  width: 28px;
-  height: 28px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  border: 0.5px solid var(--border-dark-10);
-  background: var(--bg-cream);
-  color: var(--brand-dark);
-  cursor: pointer;
 }
 
 .mobile-menu__nav {
