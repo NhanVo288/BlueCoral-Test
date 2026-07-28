@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <>
       <header className="navbar">
-        <a href="/" className="navbar__logo" aria-label="Qtable">
+        <a href="/bluecoral-test/" className="navbar__logo" aria-label="Qtable">
           <Logo />
         </a>
 
