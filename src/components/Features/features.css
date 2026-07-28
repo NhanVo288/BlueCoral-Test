@@ -267,7 +267,6 @@
   display: flex;
   width: 540px;
   gap: 16px;
-  border-left: 1px solid var(--border-dark-10);
   padding-right: 16px;
 }
 
